@@ -1,4 +1,4 @@
-.PHONY: all clean
+.PHONY: all clean subscribeCert
 
 all: .make.geninter
 
@@ -17,6 +17,9 @@ all: .make.geninter
 .make.genca: .make.cnf 
 	./src/genCA.sh
 	touch .make.genca
+
+subscribeCert: .make.geninter
+	./src/subscribe_cert.sh $(website_link)
 
 clean:
 	-rm -rf ./ca
