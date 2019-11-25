@@ -1,0 +1,3 @@
+mkdir ca
+cp ./cnf/openssl_cnf/root_cnf/openssl_cnf.cnf ./ca
+

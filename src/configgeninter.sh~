@@ -1,0 +1,7 @@
+#!/bin/bash
+# Prepara un directorio
+cd ca
+mkdir 
+touch ./ca/openssl.cnf
+export CADIR=`pwd`
+(envsubst '${CADIR}' < ./cnf/openssl_cnf/root_cnf/openssl.cnf) > ./ca/openssl.cnf
