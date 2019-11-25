@@ -5,6 +5,7 @@ mkdir certs crl csr newcerts  private
 chmod 700 private
 touch index.txt
 echo 1000 > serial
+echo 1000 > crlnumber
 cd ..
 echo "Set a pass phrase for the intermediate authority:"
 openssl genrsa -aes256 -out intermediate/private/intermediate.key.pem 4096
