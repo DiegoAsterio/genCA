@@ -1,0 +1,4 @@
+# REQUIREMENTS
+make
+openssl
+envsubst
